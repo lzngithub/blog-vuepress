@@ -23,7 +23,7 @@ module.exports = {
     nav,
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/icon.png', // 导航栏logo
-    repo: 'lzngithub/vuepress-blog', // 导航栏右侧生成Github链接
+    repo: 'lzngithub/blog-vuepress', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
@@ -161,7 +161,7 @@ module.exports = {
     //     options: {
     //       clientID: '714fa71d5852fd111050',
     //       clientSecret: '7d111a2f0cd9c24fa53482077c4cced062f9916f',
-    //       repo: 'vdoingBlog', // GitHub 仓库
+    //       repo: 'blog-vuepress', // GitHub 仓库
     //       owner: 'lzngithub', // GitHub仓库所有者
     //       admin: ['lzngithub'], // 对仓库有写权限的人
     //       distractionFreeMode: false,
