@@ -85,7 +85,7 @@ module.exports = {
     },
     footer:{ // 页脚信息
       createYear: 2019, // 博客创建年份
-      copyrightInfo: 'Love_silence | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
+      copyrightInfo: 'Love_silence | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a> 备案号：<a href="https://beian.miit.gov.cn/">桂ICP备2022001115号</a>', // 博客版权信息，支持a标签
     },
     // htmlModules, // 首页右下角的介绍
   },
