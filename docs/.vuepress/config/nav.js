@@ -8,6 +8,7 @@ module.exports = [
         {text: 'HTML/CSS', link: '/pages/f64cb8/'}, // 注意link结尾有斜杠和没有斜杠的区别
         {text: 'JavaScript', link: '/pages/d6bb9a/'}, // 注意link结尾有斜杠和没有斜杠的区别
         {text: 'React', link: '/pages/519566/'},
+        {text: 'Vue', link: '/pages/a91b70/'},
       ]},
     ]
   },
