@@ -79,7 +79,7 @@ module.exports = {
         {
           iconClass: 'icon-erji',
           title: '听音乐',
-          link: 'https://music.163.com/#/playlist?id=3137169236'
+          link: 'https://y.qq.com/n/ryqq/playlist/8335388176'
         }
       ]
     },

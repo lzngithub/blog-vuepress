@@ -10,15 +10,15 @@ bannerBg: custom #custom自定义 # auto => 网格纹背景(有bodyBgImg时无�
 features: # 可选的
   - title: 前端
     details: JS、ES6、Vue框架等前端技术
-    link: /web/ # 可选
+    link: /fontend/ # 可选
     imgUrl: /img/1.png # 可选
   - title: 后端
     details: 胡乱学的一些后端有关的技术
-    link: /technology/
+    link: /backend/
     imgUrl: /img/2.png
   - title: 读书派
     details: 记录一些不关技术的东西
-    link: /interview/
+    link: /bookssent/
     imgUrl: /img/3.png
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
