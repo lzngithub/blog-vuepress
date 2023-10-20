@@ -1,35 +1,33 @@
 ---
 home: true
 # heroImage: /img/web.png
-heroText: Love_silence
-tagline: 用心去做你认为正确的事情。
+heroText: 行思
+tagline: 行万里路，读万卷书。
 # actionText: 立刻进入 →
 # actionLink: /web/
 bannerBg: custom #custom自定义 # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 
 features: # 可选的
-  - title: 前端
-    details: JS、ES6、Vue框架等前端技术
-    link: /fontend/ # 可选
+  - title: 底层基础
+    details: HTML、CSS、JS、设计模式、算法与数据结构相关的的基层底层技术
+    link: /base/ # 可选
     imgUrl: /img/1.png # 可选
-  - title: 后端
-    details: 胡乱学的一些后端有关的技术
-    link: /backend/
+  - title: 工程工具
+    details: 模块化、开发框架、打包部署等提升开发效率、保证工程质量相关技术
+    link: /engineering/
     imgUrl: /img/2.png
-  - title: 读书派
-    details: 记录一些不关技术的东西
-    link: /bookssent/
+  - title: 能力落地
+    details: 开发能力、业务场景、发展方向等涉及具体、发展的相关总结
+    link: /other/
     imgUrl: /img/3.png
-
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 # postList: detailed
 ---
 
-
 <!-- 小熊猫 -->
 <!-- <img src="/img/panda-waving.png" class="panda no-zoom" style="width: 130px;height: 115px;opacity: 0.8;margin-bottom: -4px;padding-bottom:0;position: fixed;bottom: 0;left: 0.5rem;z-index: 1;"> -->
 
-<!-- 
+<!--
 ## 关于
 
 ### 📚Blog
@@ -48,9 +46,9 @@ features: # 可选的
 博客部分特色功能介绍
 
 #### 一站式技术搜索
-   
+
    博客内容中包含部分技术教程，可以利用搜索框快速搜索到相关文档，即使博客中没有的，你还可以选择最下方的 `在XXX中搜索“xxx”` 快速到达你想要找的内容。
-   
+
 #### 深色模式与阅读模式
 关爱程序员，保护视力，点击右下角的主题模式按钮试试吧~
 
@@ -68,7 +66,7 @@ features: # 可选的
 </script>
 <style>
 #vanilla-box {
-  color: #F73131;
+  color: #1ba784;
 }
 </style>
 ```
@@ -80,8 +78,5 @@ features: # 可选的
 - **WeChat or QQ**: <a href="tencent://message/?uin=894072666&Site=&Menu=yesUrl" class='qq'>894072666</a>
 - **Email**: <a href="mailto:894072666@qq.com">894072666@qq.com</a>
 - **GitHub**: <https://github.com/xugaoyi>
- 
+
 </br>  -->
-
-
-

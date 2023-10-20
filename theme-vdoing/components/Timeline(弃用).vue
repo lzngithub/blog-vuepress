@@ -1,31 +1,41 @@
 <template>
   <div class="timeline-wrapper theme-vdoing-content">
     <div class="tags">
-      <a href="#全部" :class="{active: currentTag === '全部'}" :style="randomBgcolor()" @click="toggleTag('全部')">全部</a>
       <a
-        :class="{active: currentTag === key}"
+        href="#全部"
+        :class="{ active: currentTag === '全部' }"
+        :style="randomBgcolor()"
+        @click="toggleTag('全部')"
+        >全部</a
+      >
+      <a
+        :class="{ active: currentTag === key }"
         v-for="(item, key) of getPages.tagGroup"
         :style="randomBgcolor()"
         @click="toggleTag(key)"
         :key="key"
-        :href="'#'+key"
+        :href="'#' + key"
       >
-        {{key}}
+        {{ key }}
       </a>
     </div>
 
     <div class="timeline">
       <transition-group tag="ul">
-        <li class="desc" key="0">{{pageData.slogan}}</li>
+        <li class="desc" key="0">{{ pageData.slogan }}</li>
         <template v-for="yearItem in tagPages()">
           <li :key="yearItem.year">
-            <h3 class="year">{{yearItem.year}}</h3>
+            <h3 class="year">{{ yearItem.year }}</h3>
             <div class="year-wrapper">
-                <transition-group tag="span">
-                  <router-link :to="item.path" v-for="item in yearItem.pageList" :key="item.path.slice(-6)">
-                    <span class="date">{{item.formatDay}}</span>
-                    <span class="title">{{item.title}}</span>
-                  </router-link>
+              <transition-group tag="span">
+                <router-link
+                  :to="item.path"
+                  v-for="item in yearItem.pageList"
+                  :key="item.path.slice(-6)"
+                >
+                  <span class="date">{{ item.formatDay }}</span>
+                  <span class="title">{{ item.title }}</span>
+                </router-link>
               </transition-group>
             </div>
           </li>
@@ -36,76 +46,84 @@
 </template>
 
 <script>
-import { getPagesList } from '../util/getArticleDate'
+import { getPagesList } from '../util/getArticleDate';
 
 export default {
   data() {
     return {
       pageData: {
-        tagBgColor: ['#F73131', '#F8B26A', '#67CC86', '#E15B64', '#F47E60', '#849B87'],
-        slogan: '只争朝夕，不负韶华！( •̀ ω •́ )✧'
+        tagBgColor: [
+          '#1ba784',
+          '#F8B26A',
+          '#67CC86',
+          '#E15B64',
+          '#F47E60',
+          '#849B87',
+        ],
+        slogan: '只争朝夕，不负韶华！( •̀ ω •́ )✧',
       },
-      currentTag: "",
+      currentTag: '',
       posts: [],
-    }
+    };
   },
-  created() {
-    
-  },
+  created() {},
   mounted() {
-    const fmData = this.$frontmatter.pageComponent.data
-    if(fmData && fmData.slogan) {
-      this.pageData.slogan = fmData.slogan
+    const fmData = this.$frontmatter.pageComponent.data;
+    if (fmData && fmData.slogan) {
+      this.pageData.slogan = fmData.slogan;
     }
 
-    this.posts = this.$site.pages
-    document.body.style="overflow-y: scroll;" // 解决切换tag页面高度不满屏出现跳动的问题
+    this.posts = this.$site.pages;
+    document.body.style = 'overflow-y: scroll;'; // 解决切换tag页面高度不满屏出现跳动的问题
 
-    this.handleHashTag()
+    this.handleHashTag();
 
     window.onhashchange = () => {
-      this.handleHashTag()
-    }
+      this.handleHashTag();
+    };
   },
 
   computed: {
     getPages() {
-      return getPagesList(this.posts)
-    }
+      return getPagesList(this.posts);
+    },
   },
 
   watch: {
     currentTag(tag) {
       document.body.setAttribute('id', tag); // 用于解决vue-router在处理描点元素定位时的报错
-    }
+    },
   },
 
   methods: {
     handleHashTag() {
-      const hashTag = decodeURIComponent(window.location.hash.slice(1))
-      this.currentTag = hashTag ? hashTag : '全部'
+      const hashTag = decodeURIComponent(window.location.hash.slice(1));
+      this.currentTag = hashTag ? hashTag : '全部';
     },
     // 根据标签获取数据
     tagPages() {
-      if (this.currentTag === "全部") {
-        return this.getPages.allPage
+      if (this.currentTag === '全部') {
+        return this.getPages.allPage;
       } else {
-        return this.getPages.tagGroup[this.currentTag]
+        return this.getPages.tagGroup[this.currentTag];
       }
     },
     // 切换标签
     toggleTag(tag) {
-      this.currentTag = tag
+      this.currentTag = tag;
     },
 
     // 随机背景色
     randomBgcolor() {
-      const tagBgColor = this.pageData.tagBgColor
-      return { background: `${tagBgColor[Math.floor(Math.random() * tagBgColor.length)]}`}
+      const tagBgColor = this.pageData.tagBgColor;
+      return {
+        background: `${
+          tagBgColor[Math.floor(Math.random() * tagBgColor.length)]
+        }`,
+      };
     },
-
-  }
-}
+  },
+};
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
@@ -124,7 +142,7 @@ export default {
       color: #fff;
       line-height: 13px;
       font-size: 13px;
-      transition: all .5s; 
+      transition: all .5s;
       opacity: 0.9;
       box-shadow: 0px 0px 8px rgba(80,80,80,.3);
       &.active
@@ -133,7 +151,7 @@ export default {
       &:hover
         text-decoration: none!important;
       &:not(.active):hover
-        transform: scale(1.05); 
+        transform: scale(1.05);
 
 
   .v-enter{
@@ -163,7 +181,7 @@ export default {
       margin-left: -2px;
       width: 4px;
       height: 100%;
-      background: var(--borderColor); 
+      background: var(--borderColor);
     >li
       transition: all .25s ease-in-out;
       margin-bottom: 55px;
