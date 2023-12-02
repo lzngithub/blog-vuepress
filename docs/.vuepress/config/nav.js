@@ -10,6 +10,7 @@ module.exports = [
           { text: "JavaScript", link: "/pages/d6bb9a/" }, // 注意link结尾有斜杠和没有斜杠的区别
           { text: "HTML/CSS", link: "/pages/f64cb8/" }, // 注意link结尾有斜杠和没有斜杠的区别
           { text: "TypeScript", link: "/pages/696c4d/" }, // 注意link结尾有斜杠和没有斜杠的区别
+          { text: "Nodejs", link: "/pages/9f15c1/" }, // 注意link结尾有斜杠和没有斜杠的区别
         ],
       },
       {
