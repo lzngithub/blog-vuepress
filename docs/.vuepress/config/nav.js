@@ -48,6 +48,10 @@ module.exports = [
         text: "读书笔记",
         items: [{ text: "《小王子》", link: "/note/prince/" }],
       },
+      {
+        text: "专业书籍",
+        items: [{ text: "数据结构与算法", link: "/pages/740cd8/" }],
+      },
     ],
   },
   {
